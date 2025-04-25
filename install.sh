@@ -103,6 +103,14 @@ install_stow() {
     fi
 }
 
+# Перезагрузка tmux и bash
+reload_tmux_and_bash() {
+    print_message "Перезагрузка tmux и bash..."
+    tmux source-file ~/.tmux.conf
+    source ~/.bashrc
+    print_message "Перезагрузка tmux и bash завершена успешно"
+}
+
 # Основная функция установки
 main() {
     print_message "Начало установки dotfiles..."
@@ -121,6 +129,8 @@ main() {
     print_message "Установка конфигурационных файлов..."
     stow -v -t "$HOME" .
     
+    reload_tmux_and_bash
+
     print_message "Установка завершена успешно!"
     print_message "Для установки плагинов tmux выполните: tmux new-session 'prefix + I'"
     print_message "Для установки плагинов vim выполните: vim +PlugInstall"

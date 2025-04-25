@@ -37,6 +37,20 @@ export HISTFILESIZE=10000
 export EDITOR=vim
 export VISUAL=vim
 
+# Функция для замены sudo vim на sudoedit только для файлов, требующих root
+function sudo() {
+    if [ "$1" = "vim" ]; then
+        shift
+        if [ -w "$1" ]; then
+            command vim "$@"
+        else
+            command sudoedit "$@"
+        fi
+    else
+        command sudo "$@"
+    fi
+}
+
 export CLICOLOR=1
 alias ls='ls --color=auto -h'
 alias ll='ls -lh'
