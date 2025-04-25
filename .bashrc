@@ -112,23 +112,23 @@ alias untar='tar -zxvf'
 alias tarup='tar -zcvf'
 alias zipup='zip -r'
 
-# Docker aliases (if you use Docker)
-alias d='docker'
-alias dc='docker-compose'
-alias dps='docker ps'
-alias dex='docker exec -it'
-alias dco='docker-compose'
-alias dcb='docker-compose build'
-alias dce='docker-compose exec'
-alias dcl='docker-compose logs'
-alias dcp='docker-compose ps'
-alias dcr='docker-compose run'
-alias dcs='docker-compose start'
-alias dct='docker-compose stop'
+# Docker aliases
+alias d='sudo docker'
+alias dc='sudo docker-compose'
+alias dps='sudo docker ps'
+alias dex='sudo docker exec -it'
+alias dco='sudo docker-compose'
+alias dcb='sudo docker-compose build'
+alias dce='sudo docker-compose exec'
+alias dcl='sudo docker-compose logs'
+alias dcp='sudo docker-compose ps'
+alias dcr='sudo docker-compose run'
+alias dcs='sudo docker-compose start'
+alias dct='sudo docker-compose stop'
 
 # Python virtual environment
-alias venv='python3 -m venv'
-alias activate='source venv/bin/activate'
+alias venv='python3 -m venv .venv'
+alias activate='source .venv/bin/activate'
 
 # Useful functions
 function mkcd() {
