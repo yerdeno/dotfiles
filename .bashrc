@@ -192,3 +192,6 @@ export LESS_TERMCAP_se=$'\e[0m'        # end stand-out
 export LESS_TERMCAP_so=$'\e[01;33m'    # begin stand-out
 export LESS_TERMCAP_ue=$'\e[0m'        # end underline
 export LESS_TERMCAP_us=$'\e[1;32m'     # begin underline
+
+# zoxide
+eval "$(zoxide init bash --cmd cd)"

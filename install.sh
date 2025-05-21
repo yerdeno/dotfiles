@@ -49,17 +49,17 @@ install_packages() {
     
     case $pm in
         "dnf")
-            sudo dnf install -y stow git vim tmux thefuck
+            sudo dnf install -y stow git vim tmux thefuck zoxide
             ;;
         "apt")
             sudo apt update
-            sudo apt install -y stow git vim tmux
+            sudo apt install -y stow git vim tmux thefuck zoxide
             ;;
         "pacman")
-            sudo pacman -S --noconfirm stow git vim tmux
+            sudo pacman -S --noconfirm stow git vim tmux thefuck zoxide
             ;;
         "brew")
-            brew install stow git vim tmux
+            brew install stow git vim tmux thefuck zoxide
             ;;
         *)
             print_error "Неизвестный пакетный менеджер"
