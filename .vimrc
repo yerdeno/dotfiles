@@ -107,6 +107,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'sheerun/vim-polyglot'
 " Git интеграция
 Plug 'tpope/vim-fugitive'
+" Копирование в буфер через SSH
+Plug 'haya14busa/vim-poweryank'
 call plug#end()
 
 " Включить/выключить NERDTree при нажатии \n
@@ -149,6 +151,10 @@ nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
 " Открытие терминала в сплите
 nnoremap <leader>t :split term://bash<CR>
+
+" Настройки poweryank
+nmap <leader>y <Plug>(operator-poweryank-osc52)
+vmap <leader>y <Plug>(operator-poweryank-osc52)
 
 " Настройки CoC
 let g:coc_global_extensions = [
