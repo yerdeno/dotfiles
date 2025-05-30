@@ -174,11 +174,6 @@ elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-# Add custom completion for common commands
-complete -F _ssh s
-complete -F _scp scp
-complete -F _rsync rsync
-
 # Language-specific settings
 export PYTHONPATH="${PYTHONPATH}:${HOME}/.local/lib/python3.8/site-packages"
 export GOPATH="${HOME}/go"

@@ -45,7 +45,7 @@ set autoindent
 set smartindent
 
 " Показывать номера строк
-set number
+" set number
 
 " Автокомплиты в командной строке
 set wildmode=longest,list
